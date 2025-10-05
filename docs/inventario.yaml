@@ -1,0 +1,38 @@
+openapi: 3.0.3
+info:
+  title: Inventario API
+  version: 1.0.0
+  description: API del microservicio Inventario - Gestiona stock, sucursales y movimientos.
+
+servers:
+  - url: http://localhost:8082
+    description: Servidor local
+
+paths:
+  /healthz:
+    get:
+      summary: Comprobación de salud
+      responses:
+        '200':
+          description: OK
+
+  /sucursales:
+    get:
+      summary: Lista todas las sucursales
+      responses:
+        '200':
+          description: Lista de sucursales obtenida correctamente
+
+  /stock:
+    get:
+      summary: Lista el stock de productos
+      responses:
+        '200':
+          description: Lista de stock obtenida correctamente
+
+  /movimientos:
+    get:
+      summary: Lista los movimientos de stock
+      responses:
+        '200':
+          description: Movimientos obtenidos correctamente
